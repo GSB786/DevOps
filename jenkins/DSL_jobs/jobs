@@ -3,7 +3,7 @@ job('maven_dsl') {
     description('Maven dsl project')
 
     scm {
-        git('https://github.com/GSB786/simple-java-maven-app.git', 'master', {node -> node / 'extensions' << '' })
+        git('https://github.com/GSB786/maven-hello-world.git', 'master', {node -> node / 'extensions' << '' })
     }
 
     steps {
@@ -24,7 +24,7 @@ job('maven_dsl') {
     publishers {
         archiveArtifacts('target/*.jar')
         archiveJunit('target/surefire-reports/*.xml')
-        mailer('valaxytech@gmail.com', true, true)
+        mailer('saibabugagguturu786@gmail.com', true, true)
     }
 }
 
